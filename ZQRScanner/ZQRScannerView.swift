@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 // MARK: - ZQRScannerViewDelegate
- protocol ZQRScannerViewDelegate: AnyObject {
+public protocol ZQRScannerViewDelegate: AnyObject {
     // Required
     func qrScannerView(_ qrScannerView: ZQRScannerView, didFailure error: ZQRScannerError)
     func qrScannerView(_ qrScannerView: ZQRScannerView, didSuccess code: String)
@@ -17,13 +17,13 @@ import AVFoundation
     func qrScannerView(_ qrScannerView: ZQRScannerView, didChangeTorchActive isOn: Bool)
 }
 
-extension ZQRScannerViewDelegate {
+public extension ZQRScannerViewDelegate {
     func qrScannerView(_ qrScannerView: ZQRScannerView, didChangeTorchActive isOn: Bool) {}
 }
 
 // MARK: - ZQRScannerView
 @IBDesignable
-class ZQRScannerView: UIView {
+public class ZQRScannerView: UIView {
     
     // MARK: - Input
     public struct Input {
